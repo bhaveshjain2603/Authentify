@@ -15,7 +15,7 @@ const Register = () => {
   } = useForm();
 
   const handleRegister = async (data) => {
-    data.phone = `+92${data.phone}`;
+    data.phone = `+91${data.phone}`;
     await axios
       .post("http://localhost:4000/api/v1/user/register", data, {
         withCredentials: true,
@@ -51,7 +51,7 @@ const Register = () => {
             {...register("email")}
           />
           <div>
-            <span>+92</span>
+            <span>+91</span>
             <input
               type="number"
               placeholder="Phone"
