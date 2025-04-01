@@ -18,7 +18,7 @@ const Register = () => {
     data.phone = `+91${data.phone}`;
     console.log(data);
     await axios
-      .post("http://localhost:4000/api/v1/user/register", data, {
+      .post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/register`, data, {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       })
