@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Instructor.css";
-import instructorImage from "../assets/profile.png";
+import instructorImage from "../assets/profile.jpeg";
 
 const Instructor = () => {
   return (
@@ -10,37 +10,29 @@ const Instructor = () => {
           <img src={instructorImage} alt="Instructor" />
         </div>
         <div className="instructor-info">
-          <h1>Muhammad Zeeshan Khan</h1>
+          <h1>Bhavesh S Jain</h1>
           <h4>Your Instructor</h4>
           <p>
-            Hello! I'm Muhammad Zeeshan Khan, a passionate MERN stack developer
-            with a love for teaching and building scalable, robust applications.
-            With years of experience in JavaScript, React, Node.js, Express, and
-            MongoDB, I am dedicated to helping developers learn and grow their
-            skills. Join me in this journey to master authentication and the
-            MERN stack!
+            Hello! I'm Bhavesh S Jain, a passionate MERN stack developer
+            with a love for building scalable, robust and responsive applications.
+            My forte encompasses React, Node.js, MongoDB, and Express.js underpinned by certifications in Cloud Foundations and Cloud Architecting by AWS. 
+            The commitment to continuous learning and applying novel solutions to real-world problems defines my ethos. 
+            I cherish collaborative work, believing it to be the cornerstone of innovative development.
           </p>
           <div className="social-links">
             <a
-              href="https://github.com/Zeeshu911"
+              href="https://github.com/bhaveshjain2603"
               target="_blank"
               rel="noopener noreferrer"
             >
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/muhammad-zeeshan-khan-dev/"
+              href="https://www.linkedin.com/in/bhavesh-s-jain/"
               target="_blank"
               rel="noopener noreferrer"
             >
               LinkedIn
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCbGtkGZ9sDg54PtU3GEDE6w"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Youtube
             </a>
           </div>
         </div>

@@ -33,7 +33,7 @@
 }
 
 .toggle-btn.active {
-  background: #0cbb69;
+  background: #0c86bb;
   color: white;
 }
 
@@ -70,7 +70,7 @@
 .auth-form button {
   width: 100%;
   padding: 12px;
-  background: #0cbb69;
+  background: #0c86bb;
   color: white;
   border: none;
   border-radius: 5px;
@@ -80,7 +80,7 @@
 }
 
 .auth-form button:hover {
-  background: #068047;
+  background: #063d80;
 }
 
 .verification-method p {
@@ -107,7 +107,7 @@
   text-align: end;
   margin: 20px 0;
   font-size: 16px;
-  color: #0cbb69;
+  color: #063d80;
 }
 
 .forgot-password a {

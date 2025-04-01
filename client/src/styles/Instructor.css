@@ -24,7 +24,7 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 5px solid #0cbb69;
+  border: 5px solid #0c86bb;
   margin-bottom: 20px;
 }
 
@@ -37,7 +37,7 @@
 
 .instructor-info h4 {
   font-size: 32px;
-  color: #0cbb69;
+  color: #063d80;
   margin-bottom: 20px;
 }
 
@@ -57,7 +57,7 @@
 .social-links a {
   text-decoration: none;
   color: white;
-  background: #0cbb69;
+  background: #0c86bb;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
@@ -65,7 +65,7 @@
 }
 
 .social-links a:hover {
-  background: #068047;
+  background: #063d80;
   transform: translateY(-1px);
 }
 

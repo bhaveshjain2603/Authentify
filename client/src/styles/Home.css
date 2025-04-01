@@ -10,12 +10,12 @@
   font-weight: 500;
   border: none;
   border-radius: 8px;
-  background: #0cbb69;
+  background: #0c86bb;
   color: #fff;
   transition: all 0.3s;
 }
 .home button:hover {
-  background: #068047;
+  background: #063d80;
   color: #fff;
   transition: all 0.3s;
 }
