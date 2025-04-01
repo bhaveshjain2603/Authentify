@@ -28,6 +28,13 @@ const Instructor = () => {
               GitHub
             </a>
             <a
+              href="https://sbk-portfolio.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Portfolio
+            </a>
+            <a
               href="https://www.linkedin.com/in/bhavesh-s-jain/"
               target="_blank"
               rel="noopener noreferrer"

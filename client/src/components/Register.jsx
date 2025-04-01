@@ -16,6 +16,7 @@ const Register = () => {
 
   const handleRegister = async (data) => {
     data.phone = `+91${data.phone}`;
+    console.log(data);
     await axios
       .post("http://localhost:4000/api/v1/user/register", data, {
         withCredentials: true,
@@ -27,6 +28,7 @@ const Register = () => {
       })
       .catch((error) => {
         toast.error(error.response.data.message);
+        console.log(error)
       });
   };
 
