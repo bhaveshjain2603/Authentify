@@ -6,7 +6,7 @@ export const connection = () => {
       dbName: "MERN_AUTHENTICATION",
     })
     .then(() => {
-      console.log("Connected to database.");
+      console.log("Connected to MongoDB");
     })
     .catch((err) => {
       console.log(`Some error occured while connecting to database: ${err}`);
