@@ -29,5 +29,6 @@ removeUnverifiedAccounts();
 app.use(errorMiddleware);
 
 app.listen(() => {
+  console.log(`Server listening on port ${process.env.PORT}`);
   connection();
 });
