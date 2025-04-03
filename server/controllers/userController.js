@@ -15,7 +15,7 @@ export const register = catchAsyncError(async (req, res, next) => {
       return next(new ErrorHandler("All fields are required.", 400));
     }
     function validatePhoneNumber(phone) {
-      const phoneRegex = /^\+91\d{10}$/;
+      const phoneRegex = /^\+923\d{9}$/;
       return phoneRegex.test(phone);
     }
 
@@ -149,7 +149,7 @@ export const verifyOTP = catchAsyncError(async (req, res, next) => {
   const { email, otp, phone } = req.body;
 
   function validatePhoneNumber(phone) {
-    const phoneRegex = /^\+91\d{10}$/;
+    const phoneRegex = /^\+923\d{9}$/;
     return phoneRegex.test(phone);
   }
 
@@ -217,25 +217,41 @@ export const verifyOTP = catchAsyncError(async (req, res, next) => {
   }
 });
 
-export const login = catchAsyncError(async (req, res, next) => {
-  const { email, password } = req.body;
-  if (!email || !password) {
-    return next(new ErrorHandler("Email and password are required.", 400));
-  }
-  const user = await User.findOne({ email, accountVerified: true }).select(
-    "+password"
-  );
-  if (!user) {
-    return next(new ErrorHandler("Invalid email or password.", 400));
-  }
-  const isPasswordMatched = await user.comparePassword(password);
-  if (!isPasswordMatched) {
-    return next(new ErrorHandler("Invalid email or password.", 400));
-  }
-  sendToken(user, 200, "User logged in successfully.", res);
-});
+export const login = async (req, res) => {
+  try {
+    const { email, password } = req.body;
 
-export const logout = catchAsyncError(async (req, res, next) => {
+    const user = await User.findOne({ email }).select("+password");
+
+    if (!user) {
+      return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    const isMatch = await user.comparePassword(password);
+
+    if (!isMatch) {
+      return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET_KEY, {
+      expiresIn: "7d",
+    });
+
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "None", // Must be "None" for cross-origin requests
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+    });
+
+    res.status(200).json({ message: "Login successful" });
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+
+export const logout = async (req, res) => {
   res
     .status(200)
     .cookie("token", "", {
@@ -246,7 +262,7 @@ export const logout = catchAsyncError(async (req, res, next) => {
       success: true,
       message: "Logged out successfully.",
     });
-});
+};
 
 export const getUser = catchAsyncError(async (req, res, next) => {
   const user = req.user;

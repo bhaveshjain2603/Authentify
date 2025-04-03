@@ -8,7 +8,7 @@ import userRouter from "./routes/userRouter.js";
 import { removeUnverifiedAccounts } from "./automation/removeUnverifiedAccounts.js";
 
 export const app = express();
-config({ path: ".env" });
+config({ path: ".env" })
 
 app.use(
   cors({
@@ -28,7 +28,6 @@ removeUnverifiedAccounts();
 
 app.use(errorMiddleware);
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server listening on port ${process.env.PORT}`);
+app.listen(() => {
   connection();
 });
