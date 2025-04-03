@@ -217,7 +217,7 @@ export const verifyOTP = catchAsyncError(async (req, res, next) => {
   }
 });
 
-export const login = async (req, res) => {
+export const login = async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password) {
     return next(new ErrorHandler("Email and password are required.", 400));
