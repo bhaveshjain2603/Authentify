@@ -14,8 +14,8 @@ const Home = () => {
 
   const logout = async () => {
     await axios
-      .get("https://authentify-ov64.onrender.com/api/v1/user/logout", {
-        withCredentials: true, // Ensures cookies are sent
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/logout`, {
+        withCredentials: true,
       })
       .then((res) => {
         toast.success(res.data.message);
@@ -26,7 +26,6 @@ const Home = () => {
         toast.error(err.response.data.message);
         console.error(err);
       });
-      console.log("User logged out");
   };
 
   if (!isAuthenticated) {
