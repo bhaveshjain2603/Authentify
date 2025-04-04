@@ -138,7 +138,7 @@ function generateEmailTemplate(verificationCode) {
       <p style="font-size: 16px; color: #333;">Please use this code to verify your email address. The code will expire in 10 minutes.</p>
       <p style="font-size: 16px; color: #333;">If you did not request this, please ignore this email.</p>
       <footer style="margin-top: 20px; text-align: center; font-size: 14px; color: #999;">
-        <p>Thank you,<br>Your Company Team</p>
+        <p>Thank you,<br>Team Authentify</p>
         <p style="font-size: 12px; color: #aaa;">This is an automated message. Please do not reply to this email.</p>
       </footer>
     </div>
@@ -149,7 +149,7 @@ export const verifyOTP = catchAsyncError(async (req, res, next) => {
   const { email, otp, phone } = req.body;
 
   function validatePhoneNumber(phone) {
-    const phoneRegex = /^\+923\d{9}$/;
+    const phoneRegex = /^\+91\d{10}$/;
     return phoneRegex.test(phone);
   }
 
