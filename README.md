@@ -16,7 +16,6 @@ A full-featured authentication system built with the **MERN Stack** (MongoDB, Ex
 ---
 
 ## 📁 Project Structure
-
     ```bash
     Authentify/
     ├── client/
@@ -40,8 +39,8 @@ A full-featured authentication system built with the **MERN Stack** (MongoDB, Ex
     |   ├── routes/
     |   ├── utils/
     |   ├── package.json
+    
     ```
-
 ---
 
 ## 🖥️ **Setup and Installation**
