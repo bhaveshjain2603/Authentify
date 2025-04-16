@@ -19,27 +19,27 @@ A full-featured authentication system built with the **MERN Stack** (MongoDB, Ex
     ```bash
     Authentify/
     ├── client/
-    |   ├── public/
-    |   ├── src/
-    |       ├── assets/
-    |       ├── components/
-    |       ├── layout/
-    |       ├── pages/
-    |       ├── styles
-    |       ├── App.css
-    |       ├── App.jsx
-    |       ├── main.jsx
-    |   ├── package.json
+    │   ├── public/
+    │   ├── src/
+    │       ├── assets/
+    │       ├── components/
+    │       ├── layout/
+    │       ├── pages/
+    │       ├── styles
+    │       ├── App.css
+    │       ├── App.jsx
+    │       ├── main.jsx
+    │   ├── package.json
     ├── server/
-    |   ├── automation/
-    |   ├── controllers/
-    |   ├── database/
-    |   ├── middlewares/
-    |   ├── models/
-    |   ├── routes/
-    |   ├── utils/
-    |   ├── package.json
-    
+    │   ├── automation/
+    │   ├── controllers/
+    │   ├── database/
+    │   ├── middlewares/
+    │   ├── models/
+    │   ├── routes/
+    │   ├── utils/
+    │   ├── package.json
+
     ```
 ---
 
