@@ -15,34 +15,6 @@ A full-featured authentication system built with the **MERN Stack** (MongoDB, Ex
 
 ---
 
-## 📁 Project Structure
-    ```bash
-    Authentify/
-    ├── client/
-    │   ├── public/
-    │   ├── src/
-    │       ├── assets/
-    │       ├── components/
-    │       ├── layout/
-    │       ├── pages/
-    │       ├── styles
-    │       ├── App.css
-    │       ├── App.jsx
-    │       ├── main.jsx
-    │   ├── package.json
-    ├── server/
-    │   ├── automation/
-    │   ├── controllers/
-    │   ├── database/
-    │   ├── middlewares/
-    │   ├── models/
-    │   ├── routes/
-    │   ├── utils/
-    │   ├── package.json
-
-    ```
----
-
 ## 🖥️ **Setup and Installation**
 
 Follow these steps to set up the project locally:
