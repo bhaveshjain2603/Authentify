@@ -96,12 +96,8 @@ async function sendVerificationCode(
         message: `Verification email successfully sent to ${name}`,
       });
     } else if (verificationMethod === "phone") {
-      const verificationCodeWithSpace = verificationCode
-        .toString()
-        .split("")
-        .join(" ");
-      await client.calls.create({
-        twiml: `<Response><Say>Your verification code is ${verificationCodeWithSpace}. Your verification code is ${verificationCodeWithSpace}.</Say></Response>`,
+      await client.messages.create({
+        body: `Your verification code is ${verificationCode}`,
         from: process.env.TWILIO_PHONE_NUMBER,
         to: phone,
       });
